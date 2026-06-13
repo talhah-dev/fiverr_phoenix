@@ -188,8 +188,14 @@
                     </button>
                 </div>
 
-                <video id="hero-video" class="absolute inset-0 w-full h-full object-cover hidden" controls
-                    src="https://www.pexels.com/download/video/18531410/"></video>
+                <video
+                    id="hero-video"
+                    class="absolute inset-0 w-full h-full object-cover hidden"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                ></video>
             </div>
 
             <div class="flex flex-col justify-center max-w-sm">
@@ -212,13 +218,20 @@
             const playBtn = document.getElementById("play-btn");
             const video = document.getElementById("hero-video");
             const thumbnail = document.getElementById("video-thumbnail");
-            const overlay = playBtn.closest(".group").querySelector(".bg-black\\/10");
 
-            playBtn.addEventListener("click", () => {
+            playBtn.addEventListener("click", async () => {
                 thumbnail.classList.add("hidden");
                 playBtn.classList.add("hidden");
                 video.classList.remove("hidden");
-                video.play();
+
+                try {
+                    await video.play();
+                } catch (error) {
+                    console.error("Video playback failed:", error);
+                    video.classList.add("hidden");
+                    thumbnail.classList.remove("hidden");
+                    playBtn.classList.remove("hidden");
+                }
             });
 
             video.addEventListener("pause", () => {
