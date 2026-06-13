@@ -1,34 +1,58 @@
 const navbar = document.getElementById("navbar");
 
 if (navbar) {
+  const pathname = window.location.pathname.replace(/\/+$/, "");
+  const isHomePage =
+    pathname === "" ||
+    pathname === "/" ||
+    pathname.endsWith("/index.html") ||
+    pathname.endsWith("index.html");
+  const headerClasses = isHomePage
+    ? "bg-white/30 backdrop-blur-xl supports-[backdrop-filter]:bg-white/30"
+    : "bg-[#f0ece3]";
+  const borderClasses = isHomePage ? "border-[#f1efe8]" : "border-[#DDDBD5]";
+  const dropdownClasses = isHomePage
+    ? "bg-white/95 backdrop-blur-xl"
+    : "bg-[#f0ece3]";
+  const dropdownBorderClasses = isHomePage ? "border-slate-200" : "border-[#DDDBD5]";
+
   navbar.innerHTML = `
     <div class="fixed w-full top-0 z-[9999] flex justify-center px-2 py-2 sm:px-4 sm:py-4 lg:px-6">
-      <header class="w-full max-w-7xl rounded-2xl bg-white/30 backdrop-blur-xl supports-[backdrop-filter]:bg-white/30 py-3">
+      <header class="w-full max-w-7xl rounded-2xl ${headerClasses} py-3">
         <div class="mx-auto flex items-center justify-between gap-4 px-5 py-2.5 sm:px-8 lg:px-10">
-          <a href="#home" class="flex shrink-0 items-center gap-3">
+          <a href="./index.html" class="flex shrink-0 items-center gap-3">
             <img src="./docs/assets/logo.svg" alt="Phoenix & A" class="h-10 w-auto sm:h-12" />
           </a>
 
           <nav class="hidden items-center gap-8 xl:flex flex-1 justify-center">
-            <a href="#projects" class=" font-medium text-[#1a1a1a]/85 transition hover:text-[#1a1a1a]">Projects</a>
-            <a href="#news" class=" font-medium text-[#1a1a1a]/85 transition hover:text-[#1a1a1a]">News & Blogs</a>
-            <a href="#about" class=" font-medium text-[#1a1a1a]/85 transition hover:text-[#1a1a1a]">About Us</a>
+            <a href="./projects.html" class=" font-medium text-[#1a1a1a]/85 transition hover:text-[#1a1a1a]">Projects</a>
+            <a href="./news-and-blogs.html" class=" font-medium text-[#1a1a1a]/85 transition hover:text-[#1a1a1a]">News & Blogs</a>
+            <a href="./about-us.html" class=" font-medium text-[#1a1a1a]/85 transition hover:text-[#1a1a1a]">About Us</a>
           </nav>
 
           <div class="flex items-center md:gap-3 gap-1">
-            <div class="group relative">
-              <button class="flex flex-col  items-center justify-center rounded-lg md:border border-[#f1efe8] px-2 py-2.5 min-w-[38px] cursor-pointer">
+            <div id="language-wrapper" class="group relative">
+              <button
+                id="language-toggle"
+                type="button"
+                class="flex flex-col  items-center justify-center rounded-lg md:border ${borderClasses} px-2 py-2.5 min-w-[38px] cursor-pointer"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
                 <span class="md:text-sm border-b md:border-b-0 leading-tight text-[#1a1a1a]">EN</span>
               </button>
-              <div class="invisible absolute left-0 top-full z-50 translate-y-1 pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                <div class="overflow-hidden rounded-xl border border-slate-200 bg-white/95 shadow-xl backdrop-blur-xl min-w-[50px]">
+              <div
+                id="language-menu"
+                class="invisible pointer-events-none absolute left-0 top-full z-50 translate-y-1 pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100"
+              >
+                <div class="overflow-hidden rounded-xl border ${dropdownBorderClasses} ${dropdownClasses} min-w-[50px]">
                   <button class="block w-full px-2 py-2.5 text-[11px] font-semibold text-slate-700 transition hover:bg-slate-50 text-center">AZ</button>
                 </div>
               </div>
             </div>
 
             <div class="hidden xl:flex items-center gap-1">
-              <a href="#contact" class="rounded-full bg-[#dddbd5] px-7 py-2.5 text-black transition duration-300 hover:bg-[#c8c6c0]">
+              <a href="./contact.html" class="rounded-full bg-[#dddbd5] px-7 py-2.5 text-black transition duration-300 hover:bg-[#c8c6c0]">
                 Contact Us
               </a>
               <div class="w-9 h-9 rounded-full bg-black flex items-center justify-center shrink-0">
@@ -81,13 +105,13 @@ if (navbar) {
         </div>
 
         <div class="flex flex-1 flex-col justify-start px-6 pt-8 gap-2">
-          <a href="#projects" class="text-[32px] font-bold uppercase tracking-tight text-white leading-tight transition hover:opacity-70">Projects</a>
-          <a href="#news" class="text-[32px] font-bold uppercase tracking-tight text-white leading-tight transition hover:opacity-70">News&Blogs</a>
-          <a href="#about" class="text-[32px] font-bold uppercase tracking-tight text-white leading-tight transition hover:opacity-70">About Us</a>
+          <a href="./projects.html" class="text-[32px] font-bold uppercase tracking-tight text-white leading-tight transition hover:opacity-70">Projects</a>
+          <a href="./news-and-blogs.html" class="text-[32px] font-bold uppercase tracking-tight text-white leading-tight transition hover:opacity-70">News&Blogs</a>
+          <a href="./about-us.html" class="text-[32px] font-bold uppercase tracking-tight text-white leading-tight transition hover:opacity-70">About Us</a>
         
 
         <div class="flex items-center mt-5 gap-1">
-              <a href="#contact" class="rounded-full bg-[#dddbd5] px-8 py-2.5 text-black transition duration-300 hover:bg-[#c8c6c0]">
+              <a href="./contact.html" class="rounded-full bg-[#dddbd5] px-8 py-2.5 text-black transition duration-300 hover:bg-[#c8c6c0]">
                 Contact Us
               </a>
               <div class="w-9 h-9 rounded-full border border-[#f1efe8] bg-black flex items-center justify-center shrink-0">
@@ -106,6 +130,25 @@ if (navbar) {
   const mobileNav = document.getElementById("mobile-nav");
   const mobileDrawer = document.getElementById("mobile-drawer");
   const mobileClose = document.getElementById("mobile-close");
+  const languageWrapper = document.getElementById("language-wrapper");
+  const languageToggle = document.getElementById("language-toggle");
+  const languageMenu = document.getElementById("language-menu");
+
+  const isMobileLayout = () => window.matchMedia("(max-width: 1279px)").matches;
+
+  const openLanguageMenu = () => {
+    if (!languageToggle || !languageMenu) return;
+    languageMenu.classList.remove("invisible", "opacity-0", "pointer-events-none", "translate-y-1");
+    languageMenu.classList.add("visible", "opacity-100", "pointer-events-auto", "translate-y-0");
+    languageToggle.setAttribute("aria-expanded", "true");
+  };
+
+  const closeLanguageMenu = () => {
+    if (!languageToggle || !languageMenu) return;
+    languageMenu.classList.add("invisible", "opacity-0", "pointer-events-none", "translate-y-1");
+    languageMenu.classList.remove("visible", "opacity-100", "pointer-events-auto", "translate-y-0");
+    languageToggle.setAttribute("aria-expanded", "false");
+  };
 
   const openMobileNav = () => {
     if (!mobileNav || !mobileDrawer || !navToggle) return;
@@ -144,4 +187,31 @@ if (navbar) {
       link.addEventListener("click", closeMobileNav);
     });
   }
+
+  if (languageToggle) {
+    languageToggle.addEventListener("click", () => {
+      if (!isMobileLayout() || !languageMenu) return;
+      const isOpen = languageToggle.getAttribute("aria-expanded") === "true";
+      isOpen ? closeLanguageMenu() : openLanguageMenu();
+    });
+  }
+
+  if (languageWrapper) {
+    languageWrapper.addEventListener("mouseleave", () => {
+      if (!isMobileLayout()) return;
+      closeLanguageMenu();
+    });
+  }
+
+  document.addEventListener("click", (event) => {
+    if (!isMobileLayout() || !languageWrapper || !languageMenu) return;
+    if (languageWrapper.contains(event.target)) return;
+    closeLanguageMenu();
+  });
+
+  window.addEventListener("resize", () => {
+    if (!isMobileLayout()) {
+      closeLanguageMenu();
+    }
+  });
 }
