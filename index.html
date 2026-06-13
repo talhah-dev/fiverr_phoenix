@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phoenix & A</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://unpkg.com" crossorigin />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./docs/Style.css" />
+
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div id="navbar"></div>
+
+    <section id="home" class="relative min-h-screen md:rounded-b-2xl w-full overflow-hidden">
+        <div class="absolute inset-0 rounded-b-2xl w-full h-full">
+            <img src="/docs/assets/bg.png" alt="Hero Background" class="w-full h-full object-cover" />
+        </div>
+
+        <div
+            class="relative z-10 flex flex-col justify-end min-h-screen md:pb-16 pb-10 px-5 sm:px-14 lg:px-20 max-w-[1400px] mx-auto">
+            <div class="max-w-6xl">
+
+                <div class="hero-text-slider overflow-hidden">
+                    <div class="hero-slides">
+
+                        <div class="hero-slide">
+                            <h1
+                                class="text-[32px] sm:text-5xl lg:text-6xl xl:text-7xl font-black uppercase tracking-tight text-white leading-[1.05] mb-5">
+                                Furniture Designed Around Your Space
+                            </h1>
+                            <p class="text-sm sm:text-base text-white/80 leading-relaxed max-w-2xl">
+                                From concept to installation, we create furniture tailored to your space, style, and
+                                everyday needs—thoughtfully designed to bring comfort, functionality, and lasting
+                                quality into every corner of your home.
+                            </p>
+                        </div>
+
+                        <div class="hero-slide">
+                            <h1
+                                class="text-[32px] sm:text-5xl lg:text-6xl xl:text-7xl font-black uppercase tracking-tight text-white leading-[1.05] mb-5">
+                                Crafted For Modern Living
+                            </h1>
+                            <p class="text-sm sm:text-base text-white/80 leading-relaxed max-w-2xl">
+                                Every piece we create is a balance of form and function—built to last, designed to
+                                inspire, and tailored to fit seamlessly into the rhythm of your daily life.
+                            </p>
+                        </div>
+
+                        <div class="hero-slide">
+                            <h1
+                                class="text-[32px] sm:text-5xl lg:text-6xl xl:text-7xl font-black uppercase tracking-tight text-white leading-[1.05] mb-5">
+                                Quality Built To Last Generations
+                            </h1>
+                            <p class="text-sm sm:text-base text-white/80 leading-relaxed max-w-2xl">
+                                We source only the finest materials and work with skilled craftsmen to ensure every
+                                detail is executed with precision—because your home deserves nothing less.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 md:mt-10 mt-6" id="hero-pips"></div>
+
+                <div class="flex items-center gap-3 mt-6">
+                    <button id="hero-prev"
+                        class="w-9 h-9 rounded-full border border-white/40 bg-white/10 flex items-center justify-center text-white transition hover:bg-white hover:text-black backdrop-blur-sm">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9,2 4,7 9,12" />
+                        </svg>
+                    </button>
+                    <button id="hero-next"
+                        class="w-9 h-9 rounded-full border border-white/40 bg-white/10 flex items-center justify-center text-white transition hover:bg-white hover:text-black backdrop-blur-sm">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="5,2 10,7 5,12" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="bg-[#f0ece3] px-5 sm:px-14 lg:px-20 py-16 lg:py-24 overflow-hidden">
+
+        <div class="relative max-w-7xl">
+
+            <h2
+                class="text-[32px] lg:text-[72px] font-bold uppercase tracking-tight text-[#1a1a1a] leading-none mb-0 relative z-10 max-w-2xl">
+                The Story Behind
+            </h2>
+
+            <div class="flex flex-col lg:flex-row items-start justify-center gap-10 lg:gap-16">
+
+                <div class="relative shrink-0 w-full lg:w-[520px] xl:w-[697px]">
+                    <h2
+                        class="text-[32px] lg:text-[72px] font-bold uppercase tracking-tight text-[#1a1a1a] leading-none mb-[-1rem] lg:mb-[-2rem] relative z-10 pl-16 sm:pl-24 lg:pl-56">
+                        Our Craft
+                    </h2>
+                    <div class="relative z-0 rounded-2xl overflow-hidden w-full h-[340px] sm:h-[420px] lg:h-[500px]">
+                        <img src="/docs/assets/img3.png" alt="Our Craft" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center lg:pt-28 max-w-md">
+                    <h3
+                        class="text-lg sm:text-[24px] font-black uppercase tracking-tight text-[#1a1a1a] leading-snug mb-4">
+                        Furniture is more than an object.
+                    </h3>
+                    <p class="md:text-lg sm:text-base text-[#1a1a1a]/80 leading-relaxed mb-4">
+                        By combining modern design principles with skilled craftsmanship, we create pieces that are not
+                        only visually refined but also built to last.
+                    </p>
+                    <p class="md:text-lg sm:text-base text-[#868581] leading-relaxed mb-10">
+                        From concept to installation, we create furniture tailored to your space, style, and everyday
+                        needs—thoughtfully designed to bring comfort, functionality, and lasting quality into every
+                        corner of your home.
+                    </p>
+                    <div class="flex items-center gap-2">
+                        <a href="#"
+                            class="rounded-full bg-[#dddbd5] px-7 py-3 text-sm text-[#121212] transition hover:bg-[#dddbd5]">
+                            About Us
+                        </a>
+                        <div class="">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="20" fill="#121212" />
+                                <path d="M16 24L24 16" stroke="#F1EFE8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M17.5 16H24V22.5" stroke="#F1EFE8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="process" class="bg-[#f0ece3] px-5 sm:px-14 lg:px-20 py-16 lg:py-24">
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10 md:mb-16">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 lg:gap-10">
+                <h2
+                    class="text-4xl sm:text-5xl font-black uppercase tracking-tight text-[#1a1a1a] leading-none shrink-0">
+                    Our Process
+                </h2>
+                <p class="text-[##121212] leading-relaxed max-w-lg">
+                    Clear steps, careful craftsmanship, and attention to every detail.
+                </p>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+                <a href="#"
+                    class="rounded-full bg-[#dddbd5] px-6 py-3 text-sm text-[#121212] transition hover:bg-[#dddbd5]">
+                    More Details
+                </a>
+                <div class="">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="20" fill="#121212" />
+                        <path d="M16 24L24 16" stroke="#F1EFE8" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M17.5 16H24V22.5" stroke="#F1EFE8" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            <div class="relative rounded-2xl overflow-hidden h-[280px] sm:h-[320px] lg:h-[360px] group cursor-pointer">
+                <img src="/docs/assets/img2.png" alt="Furniture Consulting"
+                    class="w-full h-full object-cover transition duration-500 " />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <h3 class="text-2xl sm:text-[40px] font-bold uppercase tracking-tight text-white leading-tight">
+                        Furniture<br />Consulting
+                    </h3>
+                </div>
+            </div>
+
+            <div class="relative rounded-2xl overflow-hidden h-[280px] sm:h-[320px] lg:h-[360px] group cursor-pointer">
+                <img src="/docs/assets/image4.png" alt="Furniture Design"
+                    class="w-full h-full object-cover transition duration-500 " />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <h3 class="text-2xl sm:text-[40px] font-bold uppercase tracking-tight text-white leading-tight">
+                        Furniture<br />Design
+                    </h3>
+                </div>
+            </div>
+
+            <div class="relative rounded-2xl overflow-hidden h-[280px] sm:h-[320px] lg:h-[360px] group cursor-pointer">
+                <img src="/docs/assets/img2.png" alt="Furniture Manifacting"
+                    class="w-full h-full object-cover transition duration-500 " />
+                <div class="absolute inset-0 bg-white/10 backdrop-blur-lg rounded-3xl">
+                </div>
+                <div class="absolute inset-0 backdrop-blur-[2px]"></div>
+                <div class="absolute inset-0 p-6 flex flex-col justify-end">
+                    <h3
+                        class="text-2xl sm:text-[40px] font-bold uppercase tracking-tight text-white leading-tight mb-3">
+                        Furniture<br />Manifacting
+                    </h3>
+                    <p class="text-[#F8F7F4] leading-relaxed">
+                        Our goal is to transform everyday environments into spaces that feel intentional, comfortable,
+                        and uniquely yours.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="what-we-do" class="bg-[#121212] px-5 sm:px-10 py-16 lg:py-36">
+
+        <h2 class="text-[32px] sm:text-[72px] font-bold uppercase tracking-tight text-[#F1EFE8] text-center mb-12">
+            What We Do
+        </h2>
+
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-3 items-start">
+
+                <div class="flex flex-col gap-3 mt-0 md:gap-y-20 gap-y-10">
+
+                    <div class="relative rounded-2xl overflow-hidden  group cursor-pointer">
+                        <img src="/docs/assets/img5.png" alt="Living Room"
+                            class="w-full h-full object-cover transition duration-500 " />
+                        <h3 class="md:text-[56px] text-[32px] pt-2 font-bold uppercase tracking-tight text-[#F1EFE8]">
+                            Living Room
+                        </h3>
+                    </div>
+
+                    <div class="relative rounded-2xl overflow-hidden  group cursor-pointer">
+                        <img src="/docs/assets/img7.png" alt="Bathroom"
+                            class="w-full h-full object-cover transition duration-500 " />
+                        <h3 class="md:text-[56px] text-[32px] pt-2 font-bold uppercase tracking-tight text-[#F1EFE8]">
+                            Bathroom
+                        </h3>
+                    </div>
+
+                    <div class="relative rounded-2xl overflow-hidden  group cursor-pointer">
+                        <img src="/docs/assets/img5.png" alt="Living Room"
+                            class="w-full h-full object-cover transition duration-500 " />
+                        <h3 class="md:text-[56px] text-[32px] pt-2 font-bold uppercase tracking-tight text-[#F1EFE8]">
+                            Living Room
+                        </h3>
+                    </div>
+
+                </div>
+
+                <div class="flex flex-col gap-3 mt-16 md:gap-y-20 gap-y-10">
+
+                    <div class="relative rounded-2xl overflow-hidden  group cursor-pointer">
+                        <img src="/docs/assets/img6.png" alt="Dining Furniture"
+                            class="w-full h-full object-cover transition duration-500 " />
+                        <div class="absolute right-20 bottom-40 md:flex hidden items-center justify-center">
+                            <div class="">
+                                <svg width="183" height="183" viewBox="0 0 183 183" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="183" height="183" rx="91.5" fill="#F8F7F4" />
+                                    <path d="M71.0557 91.5H111.945" stroke="#121212" stroke-width="3.05"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M95.2173 74.7727L111.945 91.5L95.2173 108.227" stroke="#121212"
+                                        stroke-width="3.05" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                        <h3 class="md:text-[56px] text-[32px] pt-2 font-bold uppercase tracking-tight text-[#F1EFE8]">
+                            Dining Furniture
+                        </h3>
+                    </div>
+
+
+
+                    <div class="relative rounded-2xl overflow-hidden  group cursor-pointer">
+                        <img src="/docs/assets/img8.png" alt="Office Furniture"
+                            class="w-full h-full object-cover transition duration-500 " />
+                        <h3 class="md:text-[56px] text-[32px] pt-2 font-bold uppercase tracking-tight text-[#F1EFE8]">
+                            Office Furniture
+                        </h3>
+                    </div>
+
+                    <div class="relative rounded-2xl overflow-hidden  group cursor-pointer">
+                        <img src="/docs/assets/img6.png" alt="Dining Furniture"
+                            class="w-full h-full object-cover transition duration-500 " />
+                        <h3 class="md:text-[56px] text-[32px] pt-2 font-bold uppercase tracking-tight text-[#F1EFE8]">
+                            Dining Furniture
+                        </h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="flex items-center justify-center mt-10 md:mt-16">
+                <div class="flex items-center gap-2">
+                    <a href="#" class="rounded-full bg-[#dddbd5] px-9 py-3 text-[#121212] transition">
+                        View More
+                    </a>
+                    <div class="">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#F1EFE8" />
+                            <path d="M16 24L24 16" stroke="#F1EFE8" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17.5 16H24V22.5" stroke="#F1EFE8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="news" class="py-24 md:py-28 pl-5 lg:pl-16 bg-[#f1efe8]">
+
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-6 mb-10 md:mb-16 pr-5 lg:pr-16">
+            <div class="flex  flex-col sm:flex-row sm:items-start gap-6 lg:gap-12">
+                <h2
+                    class="text-4xl sm:text-5xl font-black uppercase tracking-tight text-[#1a1a1a] leading-none shrink-0">
+                    News&Blogs
+                </h2>
+                <p class="text-sm text-[#121212] leading-relaxed max-w-lg pt-1">
+                    We share insights, inspiration, and ideas that help transform everyday spaces into thoughtfully
+                    designed environments.
+                </p>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+                <a href="#"
+                    class="rounded-full bg-[#e8e4da] px-6 py-3 text-sm text-[#121212] transition hover:bg-[#dddbd5]">
+                    More Details
+                </a>
+                <div class="w-10 h-10 rounded-full bg-[#1a1a1a] flex items-center justify-center shrink-0">
+                    <img src="/docs/assets/ArrowUpRight.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper news-swiper  overflow-visible mb-8">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide !w-[300px] sm:!w-[340px]">
+                    <div class="relative">
+                        <img src="/docs/assets/image4.png" alt="Blog 1"
+                            class="w-full h-[220px] object-cover rounded-xl" />
+                        <div
+                            class="absolute bottom-3 left-3 bg-[#1a1a1a] text-white rounded-lg px-3 py-2 text-center min-w-[44px]">
+                            <div class="text-base font-medium leading-none">14</div>
+                            <div class="text-[10px] uppercase tracking-wide mt-0.5 opacity-70">Aug</div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-lg text-[#868581] leading-snug">How to design a Neuroinclusive Workplace</p>
+                </div>
+
+                <div class="swiper-slide !w-[300px] sm:!w-[340px]">
+                    <div class="relative">
+                        <img src="/docs/assets/image4.png" alt="Blog 2"
+                            class="w-full h-[220px] object-cover rounded-xl" />
+                        <div
+                            class="absolute bottom-3 left-3 bg-[#1a1a1a] text-white rounded-lg px-3 py-2 text-center min-w-[44px]">
+                            <div class="text-base font-medium leading-none">22</div>
+                            <div class="text-[10px] uppercase tracking-wide mt-0.5 opacity-70">Sep</div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-lg text-[#868581] leading-snug">How to design a Neuroinclusive Workplace</p>
+                </div>
+
+                <div class="swiper-slide !w-[300px] sm:!w-[340px]">
+                    <div class="relative">
+                        <img src="/docs/assets/image4.png" alt="Blog 3"
+                            class="w-full h-[220px] object-cover rounded-xl" />
+                        <div
+                            class="absolute bottom-3 left-3 bg-[#1a1a1a] text-white rounded-lg px-3 py-2 text-center min-w-[44px]">
+                            <div class="text-base font-medium leading-none">05</div>
+                            <div class="text-[10px] uppercase tracking-wide mt-0.5 opacity-70">Oct</div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-lg text-[#868581] leading-snug">How to design a Neuroinclusive Workplace</p>
+                </div>
+
+                <div class="swiper-slide !w-[300px] sm:!w-[340px]">
+                    <div class="relative">
+                        <img src="/docs/assets/image4.png" alt="Blog 4"
+                            class="w-full h-[220px] object-cover rounded-xl" />
+                        <div
+                            class="absolute bottom-3 left-3 bg-[#1a1a1a] text-white rounded-lg px-3 py-2 text-center min-w-[44px]">
+                            <div class="text-base font-medium leading-none">18</div>
+                            <div class="text-[10px] uppercase tracking-wide mt-0.5 opacity-70">Nov</div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-lg text-[#868581] leading-snug">How to design a Neuroinclusive Workplace</p>
+                </div>
+
+                <div class="swiper-slide !w-[300px] sm:!w-[340px]">
+                    <div class="relative">
+                        <img src="/docs/assets/image4.png" alt="Blog 5"
+                            class="w-full h-[220px] object-cover rounded-xl" />
+                        <div
+                            class="absolute bottom-3 left-3 bg-[#1a1a1a] text-white rounded-lg px-3 py-2 text-center min-w-[44px]">
+                            <div class="text-base font-medium leading-none">30</div>
+                            <div class="text-[10px] uppercase tracking-wide mt-0.5 opacity-70">Dec</div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-lg text-[#868581] leading-snug">How to design a Neuroinclusive Workplace</p>
+                </div>
+
+                <div class="swiper-slide !w-[300px] sm:!w-[340px]">
+                    <div class="relative">
+                        <img src="/docs/assets/image4.png" alt="Blog 5"
+                            class="w-full h-[220px] object-cover rounded-xl" />
+                        <div
+                            class="absolute bottom-3 left-3 bg-[#1a1a1a] text-white rounded-lg px-3 py-2 text-center min-w-[44px]">
+                            <div class="text-base font-medium leading-none">30</div>
+                            <div class="text-[10px] uppercase tracking-wide mt-0.5 opacity-70">Dec</div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-lg text-[#868581] leading-snug">How to design a Neuroinclusive Workplace</p>
+                </div>
+
+                <div class="swiper-slide !w-[300px] sm:!w-[340px]">
+                    <div class="relative">
+                        <img src="/docs/assets/image4.png" alt="Blog 5"
+                            class="w-full h-[220px] object-cover rounded-xl" />
+                        <div
+                            class="absolute bottom-3 left-3 bg-[#1a1a1a] text-white rounded-lg px-3 py-2 text-center min-w-[44px]">
+                            <div class="text-base font-medium leading-none">30</div>
+                            <div class="text-[10px] uppercase tracking-wide mt-0.5 opacity-70">Dec</div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-lg text-[#868581] leading-snug">How to design a Neuroinclusive Workplace</p>
+                </div>
+
+                <div class="swiper-slide !w-[300px] sm:!w-[340px]">
+                    <div class="relative">
+                        <img src="/docs/assets/image4.png" alt="Blog 5"
+                            class="w-full h-[220px] object-cover rounded-xl" />
+                        <div
+                            class="absolute bottom-3 left-3 bg-[#1a1a1a] text-white rounded-lg px-3 py-2 text-center min-w-[44px]">
+                            <div class="text-base font-medium leading-none">30</div>
+                            <div class="text-[10px] uppercase tracking-wide mt-0.5 opacity-70">Dec</div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-lg text-[#868581] leading-snug">How to design a Neuroinclusive Workplace</p>
+                </div>
+
+                <div class="swiper-slide !w-[300px] sm:!w-[340px]">
+                    <div class="relative">
+                        <img src="/docs/assets/image4.png" alt="Blog 5"
+                            class="w-full h-[220px] object-cover rounded-xl" />
+                        <div
+                            class="absolute bottom-3 left-3 bg-[#1a1a1a] text-white rounded-lg px-3 py-2 text-center min-w-[44px]">
+                            <div class="text-base font-medium leading-none">30</div>
+                            <div class="text-[10px] uppercase tracking-wide mt-0.5 opacity-70">Dec</div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-lg text-[#868581] leading-snug">How to design a Neuroinclusive Workplace</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flex pr-5 lg:pr-16 md:pt-10 pt-4 items-center justify-between gap-6 mt-4">
+            <div class="flex-1 relative h-[9px] bg-[#1a1a1a]/15 rounded-full overflow-hidden">
+                <div id="news-progress-bar"
+                    class="absolute left-0 top-0 h-full bg-[#163928] rounded-full transition-all duration-300"
+                    style="width: 0%"></div>
+            </div>
+            <div class="flex items-center gap-3 shrink-0">
+                <button id="news-prev" class="w-10 h-10 cursor-pointer hover:opacity-70">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="43" height="43" rx="21.5" stroke="#121212" />
+                        <path d="M28.1875 22H15.8125" stroke="#121212" stroke-width="0.75" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M20.875 16.9375L15.8125 22L20.875 27.0625" stroke="#121212" stroke-width="0.75"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+                <button id="news-next" class="w-10 h-10 cursor-pointer hover:opacity-70">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="43" height="43" rx="21.5" stroke="#121212" />
+                        <path d="M15.8125 22H28.1875" stroke="black" stroke-width="0.75" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M23.125 16.9375L28.1875 22L23.125 27.0625" stroke="black" stroke-width="0.75"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+    <script src="./docs/javascript/global.js"></script>
+    <script src="./docs/javascript/Navbar.js"></script>
+    <script src="./docs/javascript/Footer.js"></script>
+</body>
+
+</html>
