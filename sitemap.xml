@@ -16,6 +16,9 @@
     <loc>https://example.com/news-and-blogs.html</loc>
   </url>
   <url>
+    <loc>https://example.com/blog-detail.html</loc>
+  </url>
+  <url>
     <loc>https://example.com/contact.html</loc>
   </url>
 </urlset>

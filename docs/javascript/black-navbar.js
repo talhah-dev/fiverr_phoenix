@@ -7,25 +7,27 @@ if (blackNavbar) {
         <div class="flex items-center justify-between px-5 py-4 lg:px-8">
           
           <div class="flex items-center">
-            <img 
-              src="./docs/assets/logo-white.svg" 
-              alt="Logo"
-              class="h-10 w-auto object-contain"
-            />
+            <a href="./index.html" class="inline-flex items-center">
+              <img 
+                src="./docs/assets/logo-white.svg" 
+                alt="Logo"
+                class="h-10 w-auto object-contain"
+              />
+            </a>
           </div>
 
           <nav class="hidden xl:flex items-center gap-12 absolute left-1/2 -translate-x-1/2">
-            <button class="text-[#F1EFE8] font-medium transition duration-300 ">
+            <a href="./projects.html" class="text-[#F1EFE8] font-medium transition duration-300 hover:opacity-70">
               Projects
-            </button>
+            </a>
 
-            <button class="text-[#F1EFE8] font-medium transition duration-300 ">
+            <a href="./news-and-blogs.html" class="text-[#F1EFE8] font-medium transition duration-300 hover:opacity-70">
               News & Blogs
-            </button>
+            </a>
 
-            <button class="text-[#F1EFE8] font-medium transition duration-300 ">
+            <a href="./about-us.html" class="text-[#F1EFE8] font-medium transition duration-300 hover:opacity-70">
               About Us
-            </button>
+            </a>
           </nav>
 
           <div class="flex items-center gap-2 sm:gap-3">
@@ -54,14 +56,15 @@ if (blackNavbar) {
             </div>
 
             <div class="hidden xl:flex items-center gap-2">
-              <button
+              <a href="./contact.html"
                 class="rounded-full bg-[#d9d6cf] px-7 py-3 text-sm font-medium text-black transition duration-300 hover:bg-white"
               >
                 Contact Us
-              </button>
+              </a>
 
-              <button
+              <a href="./contact.html"
                 class=""
+                aria-label="Contact Us"
               >
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="40" height="40" rx="20" fill="#121212"/>
@@ -69,7 +72,7 @@ if (blackNavbar) {
                     <path d="M17.5 16H24V22.5" stroke="#F1EFE8" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
 
-              </button>
+              </a>
             </div>
 
             <button
@@ -158,27 +161,28 @@ if (blackNavbar) {
 
         <div class="flex flex-col px-6 pt-12 gap-8">
           
-          <button class="text-left text-[38px] font-semibold tracking-tight text-white transition hover:opacity-70">
+          <a href="./projects.html" class="text-left text-[38px] font-semibold tracking-tight text-white transition hover:opacity-70">
             Projects
-          </button>
+          </a>
 
-          <button class="text-left text-[38px] font-semibold tracking-tight text-white transition hover:opacity-70">
+          <a href="./news-and-blogs.html" class="text-left text-[38px] font-semibold tracking-tight text-white transition hover:opacity-70">
             News & Blogs
-          </button>
+          </a>
 
-          <button class="text-left text-[38px] font-semibold tracking-tight text-white transition hover:opacity-70">
+          <a href="./about-us.html" class="text-left text-[38px] font-semibold tracking-tight text-white transition hover:opacity-70">
             About Us
-          </button>
+          </a>
 
           <div class="flex items-center gap-2 pt-6">
-            <button
+            <a href="./contact.html"
               class="rounded-full bg-[#d9d6cf] px-8 py-3 text-sm font-medium text-black transition duration-300 hover:bg-white"
             >
               Contact Us
-            </button>
+            </a>
 
-            <button
+            <a href="./contact.html"
               class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white transition duration-300 hover:bg-white hover:text-black"
+              aria-label="Contact Us"
             >
               <svg
                 width="14"
@@ -201,7 +205,7 @@ if (blackNavbar) {
                   stroke-linejoin="round"
                 />
               </svg>
-            </button>
+            </a>
           </div>
 
         </div>
